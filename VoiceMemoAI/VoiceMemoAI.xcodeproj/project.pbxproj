@@ -1,0 +1,72 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {};
+	objectVersion = 56;
+	objects = {
+		000000000000000000000001 /* App product */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VoiceMemoAI.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		000000000000000000000002 /* VoiceMemoAIApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoiceMemoAIApp.swift; sourceTree = "<group>"; };
+		000000000000000000000003 /* Recording.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Recording.swift; sourceTree = "<group>"; };
+		000000000000000000000004 /* RecorderStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecorderStore.swift; sourceTree = "<group>"; };
+		000000000000000000000005 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		000000000000000000000006 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		000000000000000000000007 /* VoiceMemoAIApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000000000000000002; };
+		000000000000000000000008 /* Recording.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000000000000000003; };
+		000000000000000000000009 /* RecorderStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000000000000000004; };
+		00000000000000000000000A /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000000000000000005; };
+		000000000000000000000019 /* AIExplainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00000000000000000000001B; };
+		00000000000000000000001B /* AIExplainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AIExplainer.swift; sourceTree = "<group>"; };
+		00000000000000000000000B /* Source files */ = {isa = PBXGroup; children = (
+			000000000000000000000002,
+			000000000000000000000003,
+			000000000000000000000004,
+			000000000000000000000005,
+			000000000000000000000006,
+			00000000000000000000001B,
+		); path = .; sourceTree = "<group>"; };
+		00000000000000000000000C /* Products */ = {isa = PBXGroup; children = (000000000000000000000001); name = Products; sourceTree = "<group>"; };
+		00000000000000000000000D /* Main group */ = {isa = PBXGroup; children = (00000000000000000000000B, 00000000000000000000000C); sourceTree = "<group>"; };
+		00000000000000000000000E /* Sources */ = {isa = PBXSourcesBuildPhase; buildActionMask = 2147483647; files = (
+			000000000000000000000007,
+			000000000000000000000008,
+			000000000000000000000009,
+			00000000000000000000000A,
+			000000000000000000000019,
+		); runOnlyForDeploymentPostprocessing = 0; };
+		00000000000000000000000F /* Frameworks */ = {isa = PBXFrameworksBuildPhase; buildActionMask = 2147483647; files = (); runOnlyForDeploymentPostprocessing = 0; };
+		000000000000000000000010 /* Resources */ = {isa = PBXResourcesBuildPhase; buildActionMask = 2147483647; files = (); runOnlyForDeploymentPostprocessing = 0; };
+		000000000000000000000011 /* App target */ = {isa = PBXNativeTarget; buildConfigurationList = 000000000000000000000017; buildPhases = (
+			00000000000000000000000E, 00000000000000000000000F, 000000000000000000000010,
+		); buildRules = (); dependencies = (); name = "Слушай"; productName = VoiceMemoAI; productReference = 000000000000000000000001; productType = "com.apple.product-type.application"; };
+		000000000000000000000012 /* Project */ = {isa = PBXProject; attributes = {BuildIndependentTargetsInParallel = 1; LastUpgradeCheck = 1600; TargetAttributes = {000000000000000000000011 = {CreatedOnToolsVersion = 16.0; }; }; }; buildConfigurationList = 000000000000000000000018; compatibilityVersion = "Xcode 14.0"; developmentRegion = ru; hasScannedForEncodings = 0; knownRegions = (ru, en, Base); mainGroup = 00000000000000000000000D; productRefGroup = 00000000000000000000000C; projectDirPath = ""; projectRoot = ""; targets = (000000000000000000000011); };
+		000000000000000000000013 /* Debug app */ = {isa = XCBuildConfiguration; buildSettings = {
+			CODE_SIGN_STYLE = Automatic;
+			CURRENT_PROJECT_VERSION = 1;
+			GENERATE_INFOPLIST_FILE = NO;
+			INFOPLIST_FILE = Info.plist;
+			IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+			MARKETING_VERSION = 1.0;
+			PRODUCT_BUNDLE_IDENTIFIER = com.example.ListenNotes;
+			PRODUCT_NAME = "$(TARGET_NAME)";
+			SWIFT_VERSION = 5.0;
+			TARGETED_DEVICE_FAMILY = "1";
+		}; name = Debug; };
+		000000000000000000000014 /* Release app */ = {isa = XCBuildConfiguration; buildSettings = {
+			CODE_SIGN_STYLE = Automatic;
+			CURRENT_PROJECT_VERSION = 1;
+			GENERATE_INFOPLIST_FILE = NO;
+			INFOPLIST_FILE = Info.plist;
+			IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+			MARKETING_VERSION = 1.0;
+			PRODUCT_BUNDLE_IDENTIFIER = com.example.ListenNotes;
+			PRODUCT_NAME = "$(TARGET_NAME)";
+			SWIFT_VERSION = 5.0;
+			TARGETED_DEVICE_FAMILY = "1";
+		}; name = Release; };
+		000000000000000000000015 /* Debug project */ = {isa = XCBuildConfiguration; buildSettings = {ALWAYS_SEARCH_USER_PATHS = NO; CLANG_ENABLE_MODULES = YES; IPHONEOS_DEPLOYMENT_TARGET = 17.0; SDKROOT = iphoneos; SWIFT_VERSION = 5.0; }; name = Debug; };
+		000000000000000000000016 /* Release project */ = {isa = XCBuildConfiguration; buildSettings = {ALWAYS_SEARCH_USER_PATHS = NO; CLANG_ENABLE_MODULES = YES; IPHONEOS_DEPLOYMENT_TARGET = 17.0; SDKROOT = iphoneos; SWIFT_VERSION = 5.0; }; name = Release; };
+		000000000000000000000017 /* App configs */ = {isa = XCConfigurationList; buildConfigurations = (000000000000000000000013, 000000000000000000000014); defaultConfigurationIsVisible = 0; defaultConfigurationName = Release; };
+		000000000000000000000018 /* Project configs */ = {isa = XCConfigurationList; buildConfigurations = (000000000000000000000015, 000000000000000000000016); defaultConfigurationIsVisible = 0; defaultConfigurationName = Release; };
+	};
+	rootObject = 000000000000000000000012;
+}
