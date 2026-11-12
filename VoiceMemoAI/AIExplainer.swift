@@ -20,7 +20,7 @@ enum AIExplainer {
         let text = transcript.trimmingCharacters(in: .whitespacesAndNewlines)
         guard !text.isEmpty else { throw AIExplainerError.emptyTranscript }
 
-        if #available(iOS 26.0, *),
+        if #available(iOS 27.0, *),
            SystemLanguageModel.default.availability == .available,
            SystemLanguageModel.default.supportsLocale(Locale(identifier: "ru-RU")),
            text.count <= 12_000 {
