@@ -17,6 +17,8 @@ jobs:
         run: xcodebuild -version
 
       - name: Build unsigned iOS app
+        id: build
+        continue-on-error: true
         run: |
           xcodebuild \
             -project VoiceMemoAI/VoiceMemoAI.xcodeproj \
@@ -24,8 +26,33 @@ jobs:
             -configuration Release \
             -destination "generic/platform=iOS" \
             -derivedDataPath build/DerivedData \
+            -resultBundlePath build/Build.xcresult \
             CODE_SIGNING_ALLOWED=NO \
-            build
+            build 2>&1 | tee build/xcodebuild.log
+          exit ${PIPESTATUS[0]}
+
+      - name: Export build diagnostics
+        if: steps.build.outcome == 'failure'
+        run: |
+          mkdir -p build/artifacts
+          xcrun xcresulttool get log --path build/Build.xcresult --type console \
+            > build/artifacts/xcodebuild-diagnostics.txt || true
+          if [ ! -s build/artifacts/xcodebuild-diagnostics.txt ]; then
+            cp build/xcodebuild.log build/artifacts/xcodebuild-diagnostics.txt
+          fi
+
+      - name: Upload build diagnostics
+        if: steps.build.outcome == 'failure'
+        uses: actions/upload-artifact@v4
+        with:
+          name: ios-build-diagnostics
+          path: build/artifacts/xcodebuild-diagnostics.txt
+          if-no-files-found: warn
+          retention-days: 14
+
+      - name: Fail when Xcode build failed
+        if: steps.build.outcome == 'failure'
+        run: exit 1
 
       - name: Package app
         run: |

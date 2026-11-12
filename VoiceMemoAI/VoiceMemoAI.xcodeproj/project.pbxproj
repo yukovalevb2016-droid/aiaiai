@@ -44,7 +44,7 @@
 			CURRENT_PROJECT_VERSION = 1;
 			GENERATE_INFOPLIST_FILE = NO;
 			INFOPLIST_FILE = Info.plist;
-			IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+			IPHONEOS_DEPLOYMENT_TARGET = 26.0;
 			MARKETING_VERSION = 1.0;
 			PRODUCT_BUNDLE_IDENTIFIER = com.example.ListenNotes;
 			PRODUCT_NAME = "$(TARGET_NAME)";
@@ -56,15 +56,15 @@
 			CURRENT_PROJECT_VERSION = 1;
 			GENERATE_INFOPLIST_FILE = NO;
 			INFOPLIST_FILE = Info.plist;
-			IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+			IPHONEOS_DEPLOYMENT_TARGET = 26.0;
 			MARKETING_VERSION = 1.0;
 			PRODUCT_BUNDLE_IDENTIFIER = com.example.ListenNotes;
 			PRODUCT_NAME = "$(TARGET_NAME)";
 			SWIFT_VERSION = 5.0;
 			TARGETED_DEVICE_FAMILY = "1";
 		}; name = Release; };
-		000000000000000000000015 /* Debug project */ = {isa = XCBuildConfiguration; buildSettings = {ALWAYS_SEARCH_USER_PATHS = NO; CLANG_ENABLE_MODULES = YES; IPHONEOS_DEPLOYMENT_TARGET = 17.0; SDKROOT = iphoneos; SWIFT_VERSION = 5.0; }; name = Debug; };
-		000000000000000000000016 /* Release project */ = {isa = XCBuildConfiguration; buildSettings = {ALWAYS_SEARCH_USER_PATHS = NO; CLANG_ENABLE_MODULES = YES; IPHONEOS_DEPLOYMENT_TARGET = 17.0; SDKROOT = iphoneos; SWIFT_VERSION = 5.0; }; name = Release; };
+		000000000000000000000015 /* Debug project */ = {isa = XCBuildConfiguration; buildSettings = {ALWAYS_SEARCH_USER_PATHS = NO; CLANG_ENABLE_MODULES = YES; IPHONEOS_DEPLOYMENT_TARGET = 26.0; SDKROOT = iphoneos; SWIFT_VERSION = 5.0; }; name = Debug; };
+		000000000000000000000016 /* Release project */ = {isa = XCBuildConfiguration; buildSettings = {ALWAYS_SEARCH_USER_PATHS = NO; CLANG_ENABLE_MODULES = YES; IPHONEOS_DEPLOYMENT_TARGET = 26.0; SDKROOT = iphoneos; SWIFT_VERSION = 5.0; }; name = Release; };
 		000000000000000000000017 /* App configs */ = {isa = XCConfigurationList; buildConfigurations = (000000000000000000000013, 000000000000000000000014); defaultConfigurationIsVisible = 0; defaultConfigurationName = Release; };
 		000000000000000000000018 /* Project configs */ = {isa = XCConfigurationList; buildConfigurations = (000000000000000000000015, 000000000000000000000016); defaultConfigurationIsVisible = 0; defaultConfigurationName = Release; };
 	};
