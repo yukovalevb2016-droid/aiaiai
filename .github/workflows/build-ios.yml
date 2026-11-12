@@ -9,6 +9,7 @@ on:
 jobs:
   build:
     runs-on: macos-26-intel
+    timeout-minutes: 15
     steps:
       - name: Check out source
         uses: actions/checkout@v4
@@ -29,6 +30,8 @@ jobs:
             -destination "generic/platform=iOS" \
             -derivedDataPath build/DerivedData \
             -resultBundlePath build/Build.xcresult \
+            -showBuildTimingSummary \
+            -parallelizeTargets \
             CODE_SIGNING_ALLOWED=NO \
             build 2>&1 | tee build/xcodebuild.log
 
